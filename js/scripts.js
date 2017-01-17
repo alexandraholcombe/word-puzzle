@@ -12,7 +12,17 @@ $(document).ready(function() {
     console.log(userInput);
 
     stringCharacters = userInput.split("");
-
     console.log(stringCharacters);
+
+    for (var character=0; character<stringCharacters.length; character++) {
+      vowels.forEach(function(vowel) {
+        if (stringCharacters[character] === vowel) {
+          stringCharacters.splice(character, 1, "-").join("");
+          console.log(stringCharacters);
+        };
+      });
+    }
+
+
   });
 });
