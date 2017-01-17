@@ -2,6 +2,7 @@
 var vowels = ["a", "i", "e", "o", "u"];
 var userInput = 0;
 var stringCharacters = 0;
+var outputString = 0;
 
 //User Interface
 $(document).ready(function() {
@@ -17,12 +18,14 @@ $(document).ready(function() {
     for (var character=0; character<stringCharacters.length; character++) {
       vowels.forEach(function(vowel) {
         if (stringCharacters[character] === vowel) {
-          stringCharacters.splice(character, 1, "-").join("");
+          stringCharacters.splice(character, 1, "-");
           console.log(stringCharacters);
         };
       });
     }
-
-
+    // stringCharacters.join("");
+    console.log(stringCharacters);
+    outputString = stringCharacters.join("");
+    console.log(outputString);
   });
 });
